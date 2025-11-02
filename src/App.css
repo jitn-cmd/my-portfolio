@@ -1,0 +1,145 @@
+/* App.css */
+
+/* Global Styles */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.App {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Header Styles */
+
+header {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+/* MyWork Section */
+
+.my-work {
+  margin-top: 20px;
+}
+
+.my-work h2 {
+  color: #4caf50;
+}
+
+/* Notes Section */
+
+h2 {
+  font-size: 2em;
+  color: #4caf50;
+}
+
+/* Add Note Form */
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Notes List */
+
+.note-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.note {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px;
+  width: 80%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.note:hover {
+  transform: translateY(-5px);
+}
+
+button.delete,
+button.hide {
+  margin-top: 10px;
+  width: 48%;
+  font-size: 0.9em;
+}
+
+button.delete {
+  background-color: #f44336;
+}
+
+button.hide {
+  background-color: #ff9800;
+}
+
+button.delete:hover {
+  background-color: #d32f2f;
+}
+
+button.hide:hover {
+  background-color: #fb8c00;
+}
+
+.note.hidden {
+  background-color: #f8d7da;
+}
+
+.note.visible {
+  background-color: #d4edda;
+}
+
+/* Footer Styles */
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+footer p {
+  margin: 0;
+  font-size: 1em;
+}

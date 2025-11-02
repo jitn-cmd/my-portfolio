@@ -1,0 +1,320 @@
+/* Global Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+
+
+/* Header Styling */
+
+.header {
+    background: #111;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* Navbar Styling */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: orange;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: orange;
+}
+
+
+/* Hero Section */
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    flex-grow: 1;
+    position: relative;
+}
+
+
+/* Left Side - Text Content */
+
+.text-content {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 10px;
+    z-index: 1;
+}
+
+.text-content h1 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.text-content .highlight {
+    color: orange;
+    font-weight: bold;
+}
+
+.text-content h2 {
+    font-size: 1.5rem;
+    color: #ddd;
+}
+
+.text-content p {
+    font-size: 1.2rem;
+    color: #bbb;
+    margin: 20px 0;
+}
+
+
+/* Center - Profile Image Container */
+
+.profile {
+    position: absolute;
+    bottom: -13.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+}
+
+
+/* Profile Image */
+
+.profile img {
+    width: 600px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* Rating Section */
+
+.rating-section {
+    max-width: 30%;
+    text-align: right;
+}
+
+.rating {
+    display: flex;
+    gap: 5px;
+    justify-content: flex-end;
+}
+
+.rating img {
+    width: 20px;
+    height: 20px;
+}
+
+.rating-text {
+    font-size: 1rem;
+    color: #ddd;
+    margin-top: 5px;
+}
+
+
+/* Buttons at Bottom */
+
+.buttons {
+    position: absolute;
+    bottom: 5%;
+    left: 48%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    z-index: 3;
+}
+
+.btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    background: rgba(255, 165, 0, 0.7);
+    color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: rgba(255, 140, 0, 0.8);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid rgba(255, 165, 0, 0.7);
+    color: orange;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 165, 0, 0.7);
+    color: white;
+}
+
+
+/* Hamburger - Mobile Menu */
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #333;
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 99;
+}
+
+.dropdown-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* 🔻 RESPONSIVE FIXES FOR MOBILE */
+
+
+/* 🌐 Mobile Responsive Styles */
+
+@media (max-width: 768px) {
+    /* 🔹 Hide desktop nav-links & show hamburger */
+    .nav-links {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+    /* 🔹 Profile image: smaller & moved up */
+    .profile img {
+        width: 400px;
+        /* Smaller image for mobile */
+        margin-top: 0px;
+        /* Image moves above text */
+    }
+    /* 🔹 Rating section moved below image and aligned left */
+    .rating-section {
+        display: none;
+        text-align: left;
+        padding-left: 150px;
+        width: 90%;
+        margin: 10px 20px 0;
+        font-size: 16px;
+        color: #fff;
+        z-index: 2;
+    }
+    /* 🔹 Buttons stacked vertically, smaller size */
+    /* 🔹 Buttons layout */
+    /* 🔘 Button container styling */
+    .buttons {
+        position: absolute !important;
+        bottom: 5% !important;
+        left: 48% !important;
+        transform: translateX(-50%) !important;
+        display: flex !important;
+        gap: 15px !important;
+        margin-top: 20px !important;
+        z-index: 3 !important;
+    }
+    /* 🔘 Main Button (White → Orange hover) */
+    .btn {
+        padding: 12px 24px;
+        font-size: 1rem;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        background: white !important;
+        /* ✅ Default white */
+        color: black !important;
+        /* ✅ Black text */
+        border-radius: 5px;
+        transition: 0.3s ease-in-out;
+    }
+    .btn:hover,
+    .btn:active {
+        background: orange !important;
+        /* 🟠 On hover */
+        color: white !important;
+        /* ✅ White text */
+    }
+    /* 🔘 Secondary Button (Transparent → White hover) */
+    .btn-secondary {
+        background: transparent !important;
+        border: 2px solid white !important;
+        color: white !important;
+    }
+    .btn-secondary:hover,
+    .btn-secondary:active {
+        background: white !important;
+        color: black !important;
+    }
+    /* 🔹 Header background height controlled by content */
+    .header {
+        min-height: 56vh;
+        /* Only as tall as needed */
+        padding-bottom: 10px;
+        /* A little space at bottom */
+    }
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .text-content {
+        position: static;
+        margin-top: 20px;
+        text-align: center;
+        transform: none;
+        left: auto;
+    }
+}

@@ -1,0 +1,26 @@
+/* src/components/Profile.css */
+
+.profile-container {
+    padding: 20px;
+    color: white;
+    background-color: #1a1a1a;
+    min-height: 80vh;
+}
+
+.profile-container h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.profile-container p {
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+
+/* Profile.css */
+
+.profile-container {
+    padding: 20px;
+    border: 2px solid red;
+}

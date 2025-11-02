@@ -1,0 +1,118 @@
+/* Notes.css */
+
+.note-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f4f6f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.note {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+
+.note h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.note p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.note small {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.note button {
+    padding: 8px 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.note .delete {
+    background-color: #f44336;
+    color: white;
+    margin-right: 10px;
+}
+
+.note .hide {
+    background-color: #4caf50;
+    color: white;
+}
+
+.note button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.note.hidden {
+    opacity: 0.5;
+    background-color: #f0f0f0;
+}
+
+input[type="text"],
+input[type="file"],
+textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 1rem;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+input[type="file"]:focus {
+    border-color: #4caf50;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
